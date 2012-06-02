@@ -1,4 +1,4 @@
-# use lib/assets/distance
+# use lib/distance
 class Friend < ActiveRecord::Base
   attr_accessible :name
   attr_accessor :friends
