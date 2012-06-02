@@ -1,5 +1,6 @@
 # use lib/distance
 class Friend < ActiveRecord::Base
+  validates_presence_of :name
   attr_accessible :name
   attr_accessor :friends
   has_many :checkouts

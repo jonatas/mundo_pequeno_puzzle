@@ -19,4 +19,8 @@ class FriendTest < ActiveSupport::TestCase
   test "should know the nearest friend" do 
     assert_equal @me.nearest_friend.name, "Maria da Costa"
   end
+  test "should validate attributes and relationships" do
+    anonymous = Friend.create
+    assert anonymous.invalid?
+  end
 end
