@@ -10,14 +10,14 @@ describe "Friends" do
   end
   it "should accept a list of friends" do
     @me.friends = [
-      @jose = Friend.new("Jose",   22,13), 
-      @marlon = Friend.new("Marlon", 21,13), 
-      @maria = Friend.new("Maria",  18,13), 
-      @joao = Friend.new("Joao",   15,13), 
+      Friend.new("Jose",   22,13), 
+      Friend.new("Marlon", 21,13), 
+      Friend.new("Maria",  18,13), 
+      Friend.new("Joao",   15,13), 
     ]
   end
   it "should know what friend is more near"  do
-    @me.more_near.should == @marlon
+    @me.nearest_friend.name.should == "Marlon"
   end
 end
 
