@@ -22,5 +22,6 @@ class FriendTest < ActiveSupport::TestCase
   test "should validate attributes and relationships" do
     anonymous = Friend.create
     assert anonymous.invalid?
+    assert anonymous.errors[:name]
   end
 end
