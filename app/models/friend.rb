@@ -9,6 +9,10 @@ class Friend < ActiveRecord::Base
     Friend.all :conditions => ["id <> ?",self.read_attribute(:id)], :include => :checkouts
   end
 
+  def at
+   [last_checkout.place.name, "(x:", x, ", y:", y, ")"].join(" ")
+  end
+
   include Distance
 
   def last_checkout
