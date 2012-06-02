@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  place_id: 1
+  friend_id: 1
+
+two:
+  place_id: 2
+  friend_id: 2
+  
+two:
+  place_id: 3
+  friend_id: 3
+
+two:
+  place_id: 4
+  friend_id: 4

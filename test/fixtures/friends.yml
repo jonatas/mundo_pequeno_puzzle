@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+jonatas:
+  id: 1
+  name: Jônatas Davi Paganini
+
+marlon:
+  id: 2
+  name: Marlon Scalabrin
+
+jose:
+  id: 3
+  name: José da Silva
+
+maria:
+  id: 4
+  name: Maria da Costa

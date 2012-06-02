@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: Home office
+  x: 12.5
+  y: 10.5
+
+two:
+  id: 2
+  name: Restaurant
+  x: 11.5
+  y: 15.5
+
+three:
+  id: 3
+  name: Jose's Home
+  x: 12.5
+  y: 13.5
+
+four:
+  id: 4
+  name: Maria's Home
+  x: 12.5
+  y: 13.5
