@@ -1,19 +1,20 @@
 # use lib/assets/distance
 class Friend < ActiveRecord::Base
   attr_accessible :name
+  attr_accessor :friends
   has_many :checkouts
 
   include Distance
 
-  def x
-    checkouts.last.x
-  end
-  def y
-    checkouts.last.y
+  def last_checkout
+    checkouts.last
   end
 
+  delegate :x,:y, :to => :last_checkout
+
   def nearest_friend
-    more_near friends
+    @friends.delete_if{|friend| not friend.last_checkout}
+    more_near @friends
   end
 end
 
