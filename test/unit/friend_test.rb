@@ -5,7 +5,6 @@ class FriendTest < ActiveSupport::TestCase
   fixtures :all
   setup do
      @me = Friend.first
-     @me.friends = Friend.all(:include => :checkouts) - [ @me ] 
   end
   test "should have a name, latitude and longitude" do
      assert_equal @me.name, "Jônatas Davi Paganini"

@@ -5,6 +5,10 @@ class Friend < ActiveRecord::Base
   attr_accessor :friends
   has_many :checkouts
 
+  def friends  
+    Friend.all :conditions => ["id <> ?",self.read_attribute(:id)], :include => :checkouts
+  end
+
   include Distance
 
   def last_checkout
@@ -14,8 +18,9 @@ class Friend < ActiveRecord::Base
   delegate :x,:y, :to => :last_checkout
 
   def nearest_friend
-    @friends.delete_if{|friend| not friend.last_checkout}
-    more_near @friends
+    _friends = friends
+    _friends.delete_if{|friend| not friend.last_checkout}
+    more_near _friends
   end
 end
 
