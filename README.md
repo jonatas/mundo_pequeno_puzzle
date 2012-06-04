@@ -1,7 +1,6 @@
-mundo_pequeno_puzzle
+mundo pequenopuzzle
 ====================
 
 Puzzle mundo pequeno
 
-Objetivo: encontrar amigo mais próximo baseado em um plano cartesiano.
-
+Mais detalhes: http://dojopuzzles.com/problemas/exibe/um-mundo-pequeno/
